@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='429' height='51.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23282828' stroke-width='7.6' stroke-opacity='0.65'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+.titulo{
+    text-align: center;
+    margin: 40px auto;            
+    display: flex;
+}
+.titulo input[type="text"]{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    border-style: none;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.418);
+    height: 40px;
+    width: 590px;
+    padding: 10px;    
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+    font-size: 1.5rem;    
+    text-align:left;
+}
+
+
+
+.imagenes{
+    margin: 60px auto;
+    position: relative;   
+    width: 600px;
+    height: 600px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(255, 255, 255, 0.116) 5px 5px 50px;
+}
+.imagenes .input {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+div .inputDiv:has(input:valid){
+    background-color: yellow;
+    
+}
+.imagenes input[type="submit"] {
+    padding: 10px;
+    position: absolute;
+    right: 4%;
+    bottom: 10%;
+    border-radius: 10px;
+    border-style: none;
+    width: 15%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(223, 223, 223) 150%);
+    transition: 0.7s;
+    z-index: 10000;
+}
+.imagenes input[type="submit"]:hover{
+    transform: scale(1.05);
+    background-color: rgb(226, 43, 174);
+}
+.imagenes label {
+    display: flex;
+    text-align: center;
+    margin: 35% auto;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;    
+    width: 60%;
+    
+}

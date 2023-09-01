@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='429' height='51.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23282828' stroke-width='7.6' stroke-opacity='0.65'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+h1{
+    text-align: center;
+    margin: 40px;
+    font-family: 'Roboto', sans-serif;    
+    font-size: 3.5rem;    
+    color: white;
+    text-shadow: rgba(255, 255, 255, 0.103) 5px 5px 15px;
+}
+.container-all{
+    position: relative;
+    
+    width: 600px;
+    height: 600px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(255, 255, 255, 0.116) 5px 5px 50px;
+}
+.slide{
+    display:flex;
+    transform: translate3d(0,0,0);
+    transition: all 700ms;
+    animation-name: autoplay;
+    animation-duration: 10.5s;
+    animation-delay: 4s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;    
+    background-color: none;
+    background: none;
+    color: none;    
+}
+
+.item-slide:hover{
+    transform: scale(1.2);
+}
+
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+    justify-content: center;
+    object-fit: contain;
+    height: 600px;
+    width: 600px;
+    background-color: none;
+    background: none;
+    color: none;
+    transition: 1.5s;
+
+}
+.item-slide img.margin{
+    margin: auto;
+}
+.imagen{    
+    object-fit: contain;
+    max-height: 600px;
+    margin: auto;
+}
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 400ms;
+}
+.pagination-item:hover{
+    transform: scale(2);
+}
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 400ms;
+}
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes autoplay {
+        
+    0% {
+        transform: translateX(0);
+      }
+    25% {
+        transform: translateX(calc(-1*600px));
+      }
+    50% {
+        transform: translateX(calc(-2*600px));
+      }
+    75% {
+        transform: translateX(calc(-3*600px));
+      }
+  100% {
+    transform: translateX(calc(-4*600px));
+  }
+}
+@media (max-width: 750px) {
+ 
+    @keyframes autoplay {
+        
+        0% {
+            transform: translateX(0);
+          }
+        25% {
+            transform: translateX(calc(-1*350px));
+          }
+        50% {
+            transform: translateX(calc(-2*350px));
+          }
+        75% {
+            transform: translateX(calc(-3*350px));
+          }
+      100% {
+        transform: translateX(calc(-4*350px));
+      }
+    }   
+h1{
+    margin: 40px;
+    font-size: 2rem;    
+}
+    .container-all{
+        position: relative;
+        
+        width: 350px;
+        height: 450px;
+    }
+
+    .item-slide{
+        height: 450px;
+        width: 350px;
+    }
+    
+    .imagen{    
+        max-height: 450px;
+    }
+    
+    }
